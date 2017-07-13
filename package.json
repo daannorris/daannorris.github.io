@@ -10,7 +10,7 @@
     "serve": "lite-server -c=config.json",
     "prestart": "npm run build",
     "start": "concurrently \"npm run build:watch\" \"npm run serve\"",
-    "minify:css": "cleancss -o dist/styles.min.css src/styles.css --source-map",
+    "minify:css": "cleancss -o dist/styles.min.css src/styles.css --source-map --source-map-inline-sources",
     "deploy": "npm run build:aot && npm run rollup && npm run minify:css",
     "lint": "tslint ./src/**/*.ts -t verbose"
   },
