@@ -1,7 +1,7 @@
 {
-  "name": "angular-quickstart",
+  "name": "angular-github-pages",
   "version": "1.0.0",
-  "description": "QuickStart package.json from the documentation, supplemented with testing support",
+  "description": "Angular running in GitHub Pages proof of concept",
   "scripts": {
     "build": "tsc -p src/",
     "build:watch": "tsc -p src/ -w",
@@ -10,11 +10,12 @@
     "serve": "lite-server -c=config.json",
     "prestart": "npm run build",
     "start": "concurrently \"npm run build:watch\" \"npm run serve\"",
-    "deploy": "npm run build:aot && npm run rollup",
+    "minify:css": "cleancss -o dist/styles.min.css src/styles.css --source-map",
+    "deploy": "npm run build:aot && npm run rollup && npm run minify:css",
     "lint": "tslint ./src/**/*.ts -t verbose"
   },
   "keywords": [],
-  "author": "",
+  "author": "@daannorris",
   "license": "MIT",
   "dependencies": {
     "@angular/common": "~4.0.0",
@@ -37,6 +38,7 @@
     "@types/jasmine": "2.5.36",
     "@types/node": "^6.0.46",
     "canonical-path": "0.0.2",
+    "clean-css-cli": "^4.1.6",
     "concurrently": "^3.2.0",
     "lite-server": "^2.2.2",
     "lodash": "^4.16.4",
