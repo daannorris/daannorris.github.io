@@ -1,9 +1,4 @@
-// Coloque su configuración en este archivo para sobrescribir la configuración predeterminada y de usuario.
 {
-    "files.exclude": {
-        "node_modules":true,
-        "src/aot": true,
-        "src/app/**/*.js*": true,
-        "src/main*.js*": true
-    }
+    "html-css-class-completion.excludeGlobPattern": "node_modules/*.{css,html}",
+    "npm.enableScriptExplorer": true
 }

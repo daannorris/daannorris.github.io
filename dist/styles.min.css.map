@@ -1,1 +1,0 @@
-{"version":3,"sources":["src/styles.css"],"names":[],"mappings":"AAAA,GACE,MAAO,KACP,YAAa,KAAK,CAAE,SAAS,CAAE,WAC/B,UAAW","sourcesContent":["h1 {\n  color: #369;\n  font-family: Arial, Helvetica, sans-serif;\n  font-size: 250%;\n}\n"]}
